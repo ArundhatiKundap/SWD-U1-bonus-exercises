@@ -62,7 +62,14 @@ mapleBaconBar.toppings.push("pecans"); // because toppings is an array
 console.log(mapleBaconBar); // now all three toppings show up
 
 // TODO: What's your favorite type of unbelievably fattening, sugary deliciousness?
+//Example 5
+let sugarGlazed = new Donut("cake", "ring", true);
 
+console.log(sugarGlazed);
+sugarGlazed.icing = "Butterscotch";
+sugarGlazed.toppings.push("Sprinkle");
+
+console.log(sugarGlazed);
 
 
 /**** OPTIONAL PARAMETERS ****/
@@ -100,6 +107,12 @@ console.log(mansionOnMainStreet);
 
 // TODO: Pretend you're a realtor. Create 3-4 more houses, some with and some without optional parameters
 
+let houseofCastleberry = new HouseForSale("single-family", 1992, 1325000, 2845, 4, 3.5, true);
+let houseofChesterfiels = new HouseForSale("TownHome", 2020, 325000, 2450, 3, 2.5, true);
+let houseofBrroktown = new HouseForSale("smulti-family", 1982, 3250000, 5845, 7, 5.5, true, true);
+let houseofMidow = new HouseForSale("single-family", 1998, 150000, 1845, 3, 2.5);
+
+console.log(houseofChesterfiels);
 
 
 /**** CLASS METHODS ****/
@@ -145,8 +158,14 @@ console.log(yellowBellPepper);
 yellowBellPepper.describe();
 yellowBellPepper.calculateTotal(5); // 5 peppers
 
-// TODO: What's going in your dinner salad tonight? Create 3-4 more objects, then call 
+// TODO: What's going in your dinner salad tonight? Create 3-4 more objects, then call
 // describe() and calculateTotal() for each
+
+let avacadobeansSalad = new Produce("Avacado", "vegetable", "each", 1.52);
+console.log(avacadobeansSalad);
+
+avacadobeansSalad.describe();
+avacadobeansSalad.calculateTotal(3);
 
 
 
@@ -162,16 +181,30 @@ yellowBellPepper.calculateTotal(5); // 5 peppers
 
 
 
+class Instrument {
+	constructor(name, category, soundLike){
+		this.name = name;
+		this.category = category;
+		this.soundLike = soundLike;
+	};
+
+	describe() {
+		console.log(`${this.name} is a ${this.category} instrument and it sounds like "${this.soundLike}".`);
+	}
+}
+
+
+
 // TODO: Once your class is complete, un-comment the lines below to test it out.
 
-// let violin = new Instrument("violin", "string", "a whirlwind romance -- and the inevitable heartbreak that follows after");
-// violin.describe();
+let violin = new Instrument("violin", "string", "a whirlwind romance -- and the inevitable heartbreak that follows after");
+ violin.describe();
 
-// let tuba = new Instrument("tuba", "brass", "Mr. Snuffleupagus trying to dance");
-// tuba.describe();
+let tuba = new Instrument("tuba", "brass", "Mr. Snuffleupagus trying to dance");
+tuba.describe();
 
-// let ukelele = new Instrument("ukelele", "string", "Barney and the Teletubbies got drunk and filmed a Hawaiian special together");
-// ukelele.describe();
+let ukelele = new Instrument("ukelele", "string", "Barney and the Teletubbies got drunk and filmed a Hawaiian special together");
+ukelele.describe();
 
-// let bagpipe = new Instrument("bagpipe", "woodwind", "200 third-graders had a recorder recital next to a turbojet engine roaring at full throttle");
-// bagpipe.describe();
+let bagpipe = new Instrument("bagpipe", "woodwind", "200 third-graders had a recorder recital next to a turbojet engine roaring at full throttle");
+bagpipe.describe();
