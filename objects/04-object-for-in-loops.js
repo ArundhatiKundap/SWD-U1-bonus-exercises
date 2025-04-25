@@ -91,8 +91,8 @@ for (let packageType in pantry) {
 	console.log(`\n${packageType.toUpperCase()}`);
 	console.log("-".repeat(packageType.length));
 	// Now we will set up a regular for loop inside to handle printing each element of each array.
-	for (let foodItem of packageType) {
-		console.log(foodItem);
+	for (let i=0; i < pantry[packageType].length; i++) {
+		console.log(pantry[packageType][i]);
 	}
 }
 // Run the program to see the results in the console. Nicely formatted, right? Notice how each array had a different number of items,
@@ -127,14 +127,7 @@ function takePrintedIndex(indexval) {
 
 takePrintedIndex(2);
 
-function displayItems(package) {
 
-	for (item of packageType) {
-
-		console.log(`Items that are ${packageType} - ${packageType[item]}`);
-	}
-
-}
 
 
 
@@ -154,7 +147,8 @@ displayItems("boxed");
 //(Hint: if you already know the name of the package type, you don't need a for...in loop to check every property!)
 
 
-// TODO: Call the function for a couple of the key names in the object and check the results. Remember that JavaScript stores object keys as strings, so you'll need to pass them in that way.
+// TODO: Call the function for a couple of the key names in the object and check the results. 
+//Remember that JavaScript stores object keys as strings, so you'll need to pass them in that way.
 
 
 /*

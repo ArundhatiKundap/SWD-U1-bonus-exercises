@@ -35,8 +35,8 @@ for (let someKey in sunsetDiner) {
 // Let's say we don't know which keys have arrays, but we need to print only the elements in any arrays found. We'll use a conditional with the helpful Array method .isArray() to see if the key holds an array in the first place, then loop to print the array's contents if that evaluates to true.
 for (let aKey in sunsetDiner) {
 	if (Array.isArray(sunsetDiner[aKey])) {
-		for (el of sunsetDiner[aKey]) {
-			console.log(el);
+		for (let i=0; i < sunsetDiner[aKey].length; i++) {
+			console.log(sunsetDiner[aKey][i]);
 		}
 	}
 }
@@ -118,6 +118,8 @@ let attractions = [zoo, gardens];
 
 for (let z1 in zoo) {
 
+	
+
 	if (Array.isArray(zoo[z1])) {
 		for (let i = 0; i < zoo[z1].length;i++) {
 			console.log(zoo[z1][i]);
@@ -142,14 +144,22 @@ for (let z1 in zoo) {
 	A favorite with the locals, the Kendrick-Lampton Art Museum boasts over a dozen features, including the Manet Gallery, 
 	Renaissance Wing, and Tiffany Collection. Admission is $26 for adults, $14 for children ages 5-12, and free for children 4 and under.
 */
+let attraction;
+let attract;
 
-for (let attraction of attractions) {
+for (attraction of attractions) {
+
+	console.log(`**************************************** \n ${attraction.name} "-"${attraction.location} \n ****************************************`)
+
 	for (let attract in attraction) {
-		for (let i of attract) { 
-			console.log(`A favorite with the locals, ${attraction.name} boasts over a dozen features, including ${attraction[attract][i]}.Admission is ${attraction.adultTicketPrice} for adults, ${attraction.childTicketPrice} for children ages 5 - 12, and free for children 4 and under.`);
+
+		if (Array.isArray(attraction[attract])) {
+			console.log(`A favorite with the locals, ${attraction.name} boasts over a dozen features, including ${attraction[attract]}.Admission is ${attraction.adultTicketPrice} for adults, ${attraction.childTicketPrice} for children ages 5 - 12, and free for children 4 and under.`);
+
 		}
+
 	}
 }
-
+	
 // TODO: Print a template literal
 
