@@ -127,7 +127,18 @@ function takePrintedIndex(indexval) {
 
 takePrintedIndex(2);
 
+<<<<<<< HEAD
 
+=======
+function displayItems(package) {
+
+	for (item of packageType) {
+
+		console.log(`Items that are ${packageType} - ${packageType[item]}`);
+	}
+
+}
+>>>>>>> e0c5dcef6cc8960d2c538d4de3e7c7c28bc8a73a
 
 
 

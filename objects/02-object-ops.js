@@ -118,7 +118,6 @@ let attractions = [zoo, gardens];
 
 for (let z1 in zoo) {
 
-	
 
 	if (Array.isArray(zoo[z1])) {
 		for (let i = 0; i < zoo[z1].length;i++) {
@@ -160,6 +159,8 @@ for (attraction of attractions) {
 
 	}
 }
-	
+
+
+
 // TODO: Print a template literal
 
