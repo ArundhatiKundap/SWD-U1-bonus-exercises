@@ -233,3 +233,33 @@ console.log(cokeZero instanceof Juice);
 */
 
 
+class Milk extends Beverage {
+    constructor(name,ounces,container,recycled,source, isNonDairy=false, flavoring=null) {
+        super(name, ounces, container, recycled);
+        this.source = source;
+        this.isNonDairy = isNonDairy ;
+        this.falvoring = flavoring;
+    }
+
+    describe() {
+        console.log(`${this.name} is my favorite beverage which can be ${this.source}.`);
+
+        console.log(this.isNonDairy);
+        if (this.isNonDairy) {
+            console.log(`Non dairy products are healthy like ${this.source}`);
+        }
+        else {
+            console.log(`Dairy Products can have flavoring like ${this.flavoring}`);
+        }
+    }
+}
+
+let milk1 = new Milk('Milk', '', '', 'Soyamilk', true);
+
+let milk2 = new Milk('Milk', 'Dairy', 'chocalate');
+
+
+console.log(milk1);
+
+milk1.describe();
+milk2.describe();
